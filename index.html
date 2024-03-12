@@ -12,7 +12,7 @@
 <body>
 
         <!-- SECCION MENU -->
-        <section class="menu-container py-2">
+        <section id="barraMenu" class="menu-container py-2">
                 <nav class="navbar navbar-expand-lg navbar-dark fixed-top"
                         style="background-color: var(--bs-background1);">
                         <div class="container-fluid">
@@ -360,7 +360,8 @@
         <!-- SECCION SPORTFOLIO -->
         <section class="portfolio" id="portfolio">
                 <div class="container-carousel">
-                        <div id="carouselExampleIndicators" class="carousel slide">
+                        <h2 class="mt-5">Portfolio</h2>
+                        <div id="carouselExampleIndicators" class="carousel slide mt-3">
                                 <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -390,13 +391,93 @@
                                                 </div>
                                         </div>
                                         <div class="carousel-item">
-                                                <img src="img/p1.jpg" class="d-block w-100" alt="...">
+                                                <video controls autoplay muted loop>
+                                                        <source src="img/p9.mp4" type="video/mp4">
+                                                        <!-- Mensaje para navegadores que no soportan el elemento <video> -->
+                                                        Tu navegador no soporta el elemento de video.
+                                                    </video>
                                                 <div class="overlay"></div>
                                                 <div class="project-description">
-                                                        <h2>TituloProyecto2</h2><br>
-                                                        <p>parrafo informativo</p><br>
+                                                        <h2 id="titulo">Flappy Bird</h2><br>
+                                                        <p id="contenido">Desarrollé mi versión del famoso video juego Flappy Bird usando las librerias awt y swing de Java.</p><br>
                                                         <div class="lenguajes">
-                                                                lista de lenguajes 
+                                                                <img class="icons" src="https://cdn-icons-png.flaticon.com/128/5968/5968282.png" alt="icon java">
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                                <video controls autoplay muted loop>
+                                                        <source src="img/p8.mp4" type="video/mp4">
+                                                        <!-- Mensaje para navegadores que no soportan el elemento <video> -->
+                                                        Tu navegador no soporta el elemento de video.
+                                                    </video>
+                                                <div class="overlay"></div>
+                                                <div class="project-description">
+                                                        <h2 id="titulo">Aplicacion del clima</h2><br>
+                                                        <p id="contenido">Creé una aplicación para consultar el clima de tu zona usando geolocalización.</p><br>
+                                                        <div class="lenguajes">
+                                                                <img class="icons" src="https://cdn-icons-png.flaticon.com/128/11516/11516140.png"
+                                                                        alt="html icon">
+                                                                <img class="icons" src="https://cdn-icons-png.flaticon.com/128/732/732190.png"
+                                                                        alt="css icon">
+                                                                <img class="icons" src="https://cdn-icons-png.flaticon.com/128/1199/1199124.png"
+                                                                        alt="JS icon ">
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                                <video controls autoplay muted loop>
+                                                        <source src="img/p7.mp4" type="video/mp4">
+                                                        <!-- Mensaje para navegadores que no soportan el elemento <video> -->
+                                                        Tu navegador no soporta el elemento de video.
+                                                    </video>
+                                                <div class="overlay"></div>
+                                                <div class="project-description">
+                                                        <h2 id="titulo">Video Juego Space-Shooter</h2><br>
+                                                        <p id="contenido">Video Juego del espacio creado en Python con la libreria pygame.</p><br>
+                                                        <div class="lenguajes">
+                                                                <img class="icons" src="https://cdn-icons-png.flaticon.com/128/1822/1822899.png"
+                                                                alt="icon python">
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                                <img src="img/p4.jpg" class="d-block w-100" alt="...">
+                                                <div class="overlay"></div>
+                                                <div class="project-description">
+                                                        <h2 id="titulo">Backend Python</h2><br>
+                                                        <p id="contenido">CRUD gestión de usuarios usando Python como lenguaje y FastApi como FrameworK.</p><br>
+                                                        <div class="lenguajes">
+                                                                <img class="icons" src="https://cdn-icons-png.flaticon.com/128/1822/1822899.png"
+                                                                        alt="icon python">
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                                <img src="img/p2.jpg" class="d-block w-100" alt="...">
+                                                <div class="overlay"></div>
+                                                <div class="project-description">
+                                                        <h2 id="titulo">Hackathon Jump2Digital</h2><br>
+                                                        <p id="contenido">Proyecto finalista, aplicación que muestra el promedio económico histórico de Barcelona.</p><br>
+                                                        <div class="lenguajes">
+                                                                <img class="icons" src="https://cdn-icons-png.flaticon.com/128/5968/5968282.png"
+                                                                        alt="icon java">
+                                                                <img class="icons" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/512px-Angular_full_color_logo.svg.png"
+                                                                        alt="angular icon">
+                                                                <img class="icons" src="https://cdn-icons-png.flaticon.com/128/5968/5968332.png"
+                                                                        alt="php icon">
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                                <img src="img/p3.jpg" class="d-block w-100" alt="...">
+                                                <div class="overlay"></div>
+                                                <div class="project-description">
+                                                        <h2 id="titulo">Floristeria</h2><br>
+                                                        <p id="contenido">CRUD para gestionar diferentes floristerias y sus stocks, usando programacíon reactiva.</p><br>
+                                                        <div class="lenguajes">
+                                                                <img class="icons" src="https://cdn-icons-png.flaticon.com/128/5968/5968282.png"
+                                                                        alt="icon java">
                                                         </div>
                                                 </div>
                                         </div>
@@ -404,76 +485,24 @@
                                                 <img src="img/p1.jpg" class="d-block w-100" alt="...">
                                                 <div class="overlay"></div>
                                                 <div class="project-description">
-                                                        <h2>TituloProyecto3</h2><br>
-                                                        <p>parrafo informativo</p><br>
+                                                        <h2 id="titulo">Ita Challenge</h2><br>
+                                                        <p id="contenido">Colaboré en la creación del backend de "IT Academy Challenges", permitiendo a estudiantes
+                                                                resolver desafíos de programación.</p><br>
                                                         <div class="lenguajes">
-                                                                lista de lenguajes 
+                                                                <img class="icons" src="https://cdn-icons-png.flaticon.com/128/5968/5968282.png"
+                                                                         alt="icon java">
                                                         </div>
                                                 </div>
                                         </div>
                                         <div class="carousel-item">
-                                                <img src="img/p1.jpg" class="d-block w-100" alt="...">
+                                                <img src="img/p5.jpg" class="d-block w-100" alt="...">
                                                 <div class="overlay"></div>
                                                 <div class="project-description">
-                                                        <h2>TituloProyecto4</h2><br>
-                                                        <p>parrafo informativo</p><br>
+                                                        <h2 id="titulo">Api Juego de dados</h2><br>
+                                                        <p id="contenido">Proyecto final, Gestion de jugadores en juego de azar.</p><br>
                                                         <div class="lenguajes">
-                                                                lista de lenguajes 
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                                <img src="img/p1.jpg" class="d-block w-100" alt="...">
-                                                <div class="overlay"></div>
-                                                <div class="project-description">
-                                                        <h2>TituloProyecto5</h2><br>
-                                                        <p>parrafo informativo</p><br>
-                                                        <div class="lenguajes">
-                                                                lista de lenguajes 
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                                <img src="img/p1.jpg" class="d-block w-100" alt="...">
-                                                <div class="overlay"></div>
-                                                <div class="project-description">
-                                                        <h2>TituloProyecto6</h2><br>
-                                                        <p>parrafo informativo</p><br>
-                                                        <div class="lenguajes">
-                                                                lista de lenguajes 
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                                <img src="img/p1.jpg" class="d-block w-100" alt="...">
-                                                <div class="overlay"></div>
-                                                <div class="project-description">
-                                                        <h2>TituloProyecto7</h2><br>
-                                                        <p>parrafo informativo</p><br>
-                                                        <div class="lenguajes">
-                                                                lista de lenguajes 
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                                <img src="img/p1.jpg" class="d-block w-100" alt="...">
-                                                <div class="overlay"></div>
-                                                <div class="project-description">
-                                                        <h2>TituloProyecto8</h2><br>
-                                                        <p>parrafo informativo</p><br>
-                                                        <div class="lenguajes">
-                                                                lista de lenguajes 
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                                <img src="img/p1.jpg" class="d-block w-100" alt="...">
-                                                <div class="overlay"></div>
-                                                <div class="project-description">
-                                                        <h2>TituloProyecto9</h2><br>
-                                                        <p>parrafo informativo</p><br>
-                                                        <div class="lenguajes">
-                                                                lista de lenguajes 
+                                                                <img class="icons" src="https://cdn-icons-png.flaticon.com/128/5968/5968282.png"
+                                                                        alt="icon java"> 
                                                         </div>
                                                 </div>
                                         </div>
@@ -492,6 +521,15 @@
                 </div>
         </section>
 
+        <footer class="site-footer">
+                <a href="#barraMenu" class="to-top">Arriba</a>
+                <div class="container">
+                  <div class="footer-content">
+                    <p>© <span id="current-year"></span> Luis Trujillo Portillo. <a href="https://github.com/Luiso-o/Portafolio" target="_blank" class="opensource-link">OpenSource.</a></p>
+                  </div>
+                </div>
+        </footer>
+              
         <script src="main.js"></script>
         <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>

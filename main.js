@@ -63,3 +63,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+//Actualizar el año automaticamente
+document.addEventListener('DOMContentLoaded', function () {
+  var year = new Date().getFullYear(); // Obtiene el año actual
+  document.getElementById('current-year').textContent = year; // Establece el año actual en el elemento con ID 'current-year'
+});

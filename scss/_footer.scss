@@ -1,0 +1,51 @@
+$theme-colors: (
+    "background1": #1e2326,  
+  "text": #ffffff,
+  "link": #64c8a4,
+);
+
+.site-footer {
+  background-color: map-get($theme-colors, "background1");
+  color: map-get($theme-colors, "text");
+  padding: 20px 0;
+  text-align: center;
+  height: 150px;
+}
+
+.site-footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.site-footer .footer-content {
+  text-align: center;
+}
+
+.site-footer .footer-content .to-top {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #64c8a4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer .footer-content .to-top:hover {
+  color: darken(#64c8a4, 10%);
+}
+
+.opensource-link {
+  color: map-get($theme-colors, "link"); 
+  transition: transform 0.3s ease; 
+  text-decoration: none; 
+}
+
+.opensource-link:hover {
+  color: map-get($theme-colors, "link");
+  transform: scale(1.1);
+}
+
+
+
