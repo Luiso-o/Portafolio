@@ -11706,7 +11706,7 @@ textarea.form-control-lg {
   left: 150%;
 }
 
-@img (max-width: 768px) {
+@media (max-width: 768px) {
   .inicio .container {
     max-width: 100%;
   }
