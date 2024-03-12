@@ -1,0 +1,22 @@
+$theme-colors: (
+  "primary": #40c8a4, 
+  "background1": #1e2326,  
+  "background2": #252a2e,
+  "hover": #33383d,
+);
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap");
+@import "scss/inicio";
+@import "scss/barraMenu";
+@import "scss/sobreMi";
+@import "scss/skills";
+@import "scss/portfolio";
+
+* {
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif; 
+  margin: 0;
+  padding: 0;
+}
+

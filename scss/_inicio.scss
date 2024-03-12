@@ -1,0 +1,149 @@
+@use "sass:math";
+
+$theme-colors: (
+  "primary": #40c8a4, 
+  "background1": #1e2326,  
+  "background2": #252a2e,
+  "hover": #33383d,
+  "icon-bg": transparent,
+  "icon-hover": #ffffff,
+);
+
+/* SECCION INICIO */
+.inicio {
+    background: linear-gradient(
+        to top,
+        rgba(30, 35, 38, 0.8),
+        rgba(30, 35, 38, 1)
+      ),
+      url(../img/fondo.jpg);
+      background-size: 100% 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.inicio .container {
+    max-width: 60%; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    height: auto; 
+}
+
+.card {
+  background-color: map-get($theme-colors, "background2");
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5); 
+  max-width: 300px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  border-radius: 50px; 
+  padding: 40px 20px; 
+  min-height: 500px; 
+  color: white;
+}
+
+.card .col-lg-6 {
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+
+.text-icons-container h1, .text-icons-container h4 {
+  font-size: 1.125rem; 
+  text-align: center;
+}
+
+.text-icons-container h1{
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.img-container img {
+  max-width: 100%;
+  max-height: 250px; 
+  height: auto; 
+  display: block; 
+  box-shadow: 0 0 8px 2px rgba(64, 200, 164, 0.7); 
+  border-radius: 50%;
+}
+
+
+.cursor {
+  opacity: 1;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+  margin-top: 10px;
+}
+
+.redes > a {
+  position: relative;
+  overflow: hidden; 
+  transition: all 0.3s ease;
+  background-color: map-get($theme-colors, "icon-bg"); 
+  width: 50px; 
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  border: 2px solid white; 
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  font-size: 22px; 
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%; 
+    height: 100%; 
+    position: absolute;
+    top: 0;
+    left: -150%;
+    opacity: 1; 
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.75), transparent);
+    transition: left 0.5s ease-in-out; 
+    transform: skewX(-20deg);
+    box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.75);
+  }
+
+  &:hover, &:focus {
+    color: white;
+    background-color: map-get($theme-colors, "primary");
+    box-shadow: 0 0 15px rgba(0,0,0,0.2), 0 0 15px map-get($theme-colors, "primary") inset;
+
+    &::before {
+      left: 150%; 
+    }
+  }
+}
+
+@img (max-width: 768px) {
+  .inicio .container {
+    max-width: 100%; 
+  }
+
+  .card {
+    max-width: 90%;
+    padding: 20px 10px; 
+  }
+
+  .text-icons-container h1, .text-icons-container h4 {
+    font-size: math.div(18px, 16px) * 1rem;
+  }
+}
