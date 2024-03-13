@@ -1,16 +1,17 @@
 //Mantiene los emogis activos cuando haces clic en alguna opcion del menu
 document.addEventListener("DOMContentLoaded", function () {
-  var navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link');
 
-  navLinks.forEach(function(link) {
-    link.addEventListener('click', function() {
-      document.querySelectorAll('.emoji').forEach(function(emoji) {
-        emoji.style.transform = 'scale(0)';
-        emoji.style.opacity = '0';
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      document.querySelectorAll('.emoji').forEach(emoji => {
+        emoji.classList.remove('active-emoji');
       });
 
-      this.querySelector('.emoji').style.transform = 'scale(1)';
-      this.querySelector('.emoji').style.opacity = '1';
+      const emojiInsideClickedLink = this.querySelector('.emoji');
+      if (emojiInsideClickedLink) {
+        emojiInsideClickedLink.classList.add('active-emoji');
+      }
     });
   });
 });
@@ -63,8 +64,25 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+//Actualiza mi experiencia
+window.onload = function() {
+  var startYear = 2021; 
+  var currentYear = new Date().getFullYear(); 
+  var experienceYears = currentYear - startYear; 
+  document.getElementById('experienceYears').innerText = experienceYears; 
+}
+
 //Actualizar el año automaticamente
 document.addEventListener('DOMContentLoaded', function () {
   var year = new Date().getFullYear(); // Obtiene el año actual
   document.getElementById('current-year').textContent = year; // Establece el año actual en el elemento con ID 'current-year'
+});
+
+
+document.getElementById('downloadCvButton').addEventListener('click', function() {
+  var emojiContainer = document.getElementById('emojiContainer');
+  emojiContainer.style.display = 'inline'; // Muestra el emoji
+  setTimeout(function() {
+      emojiContainer.style.display = 'none'; // Oculta el emoji después de 5 segundos
+  }, 5000); // Ajusta este tiempo según necesites
 });

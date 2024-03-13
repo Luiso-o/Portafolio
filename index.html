@@ -12,10 +12,9 @@
 <body>
         <!-- SECCION MENU -->
         <section id="barraMenu" class="menu-container py-2">
-                <nav class="navbar navbar-expand-lg navbar-dark fixed-top"
-                        style="background-color: var(--bs-background1);">
+                <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
                         <div class="container-fluid">
-                                <a class="navbar-brand" href="#">Hello World!</a>
+                                <a class="navbar-brand">Hello World!</a>
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
                                         aria-expanded="false" aria-label="Toggle navigation">
@@ -23,28 +22,22 @@
                                 </button>
                                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                                         <div class="navbar-nav">
-                                                <a class="nav-link" href="#inicio">INICIO<span
-                                                                class="emoji ms-1">👋</span></a>
-                                                <a class="nav-link" href="#sobremi">SOBRE MI<span
-                                                                class="emoji ms-1">🧑🏽</span></a>
-                                                <a class="nav-link" href="#skills">SKILLS<span
-                                                                class="emoji ms-1">💡</span></a>
-                                                <a class="nav-link" href="#portfolio">PORTFOLIO<span
-                                                                class="emoji ms-1">📁</span></a>
+                                          <a class="nav-link" href="#inicio">INICIO<span class="emoji ms-1" aria-hidden="true">👋</span></a>
+                                          <a class="nav-link" href="#sobremi">SOBRE MI<span class="emoji ms-1" aria-hidden="true">🧑🏽</span></a>
+                                          <a class="nav-link" href="#skills">SKILLS<span class="emoji ms-1" aria-hidden="true">💡</span></a>
+                                          <a class="nav-link" href="#portfolio">PORTFOLIO<span class="emoji ms-1" aria-hidden="true">📁</span></a>
                                         </div>
-                                </div>
+                                      </div>  
                         </div>
                 </nav>
         </section>
 
+<main>
         <!-- SECCION INICIO -->
         <section id="inicio" class="inicio">
-                <div class="container d-flex justify-content-center">
+                <div class="container container-inicio d-flex justify-content-center">
                         <div class="card">
-                                <div class="img-container">
-                                        <img src="img/presentacion.png" alt="imagen de presentacion" class="img-fluid"
-                                                loading="lazy">
-                                </div>
+                                <div class="img-container"></div>
                                 <div class="text-icons-container">
                                         <h1>Luis Trujillo</h1>
                                         <h4 class="web-developer-text" id="web-developer-text"></h4>
@@ -90,7 +83,7 @@
                                         <p>Esta transición de la ingeniería agropecuaria a la programación no solo
                                                 amplió mi perspectiva profesional, sino que también enriqueció mi
                                                 enfoque en la resolución de problemas y la innovación tecnológica. Con
-                                                tres años de experiencia en desarrollo de software, me considero un
+                                                <span id="experienceYears">3</span> años de experiencia en desarrollo de software, me considero un
                                                 profesional versátil, capaz de adaptarme y prosperar en diversos
                                                 entornos de trabajo. Siempre estoy en búsqueda de superar desafíos con
                                                 soluciones creativas y eficientes.</p>
@@ -106,11 +99,11 @@
                                                         <!--Spring-->
                                                         <a class="icono" href="#" target="_blank" rel="noreferrer"> <img
                                                                         src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg"
-                                                                        alt="spring" width="35" height="35" /> </a>
+                                                                        alt="spring"/> </a>
                                                         <!--Git-->
                                                         <a class="icono" href="#" target="_blank" rel="noreferrer"> <img
                                                                         src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
-                                                                        alt="git" width="35" height="35" /> </a>
+                                                                        alt="git"/> </a>
                                                         <!--Mongo-->
                                                         <a class="icono" href="#" target="_blank" rel="noreferrer"> <img
                                                                         src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
@@ -183,7 +176,7 @@
                                                 <!--Sass-->
                                                 <a class="icono" href="#" target="_blank" rel="noreferrer"> <img
                                                                 src="https://sass-lang.com/assets/img/styleguide/seal-color.png"
-                                                                alt="sass" width="35" height="35" /> </a>
+                                                                alt="sass"/> </a>
                                                 <!--Bootstrap-->
                                                 <a class="icono" href="#" target="_blank" rel="noreferrer"> <img
                                                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png"
@@ -201,12 +194,17 @@
                                                                 alt="visualEstudio"></a>
                                         </p>
                                 </div>
+                                <div class="container-center">
+                                <a href="document/CV.pdf" download="Luis_Trujillo_CV" class="btn-descarga">
+                                Descargar CV <i class="fa-solid fa-download"></i>
+                                </a>
+                        </div>
                         </div>
                 </div>
         </section>
 
         <!-- SECCION SKILLS -->
-        <section class="skills bg-background2" id="skills">
+        <section class="skills bg-background1" id="skills">
                 <h2 class="text-center">Skills</h2>
                 <div class="container">
                         <div class="col-lg-12 mt-3">
@@ -519,6 +517,8 @@
                         </div>
                 </div>
         </section>
+
+</main>
 
         <footer class="site-footer">
                 <a href="#barraMenu" class="to-top">Arriba</a>

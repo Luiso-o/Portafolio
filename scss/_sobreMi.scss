@@ -1,30 +1,21 @@
-$theme-colors: (
-  "primary": #40c8a4, 
-  "background1": #1e2326,  
-  "background2": #252a2e,
-  "white": #fff,
-);
-
 $font-family-base: "Work Sans", sans-serif;
-
-// Acceso a los colores del mapa
-@function color($key) {
-  @return map-get($theme-colors, $key);
-}
-
-// Establecer la fuente base para todo el proyecto
-* {
-    font-family: $font-family-base;
-}
+$letter-color: white;
+$background: #252a2e;
+$main-color: #40c8a4;
+$background-botton: #1e2326; 
 
 // Estilos generales de .sobre-mi
 .sobre-mi {
-  background-color: color("background1"); 
-  color: #fff;
+  background-color: $background; 
+  color: $letter-color;
   padding: 60px 0;
 
+  .text-center{
+    font-weight: bold;
+  }
+
   h2, h3 {
-    color: #fff;
+    color: $letter-color;
   }
 }
 
@@ -34,7 +25,7 @@ $font-family-base: "Work Sans", sans-serif;
   display: inline-block;
   
   img {
-    background-color: map-get($theme-colors,"white");
+    background-color: $letter-color;
     border-radius: 50%;
     width: 30px; 
     height: auto;
@@ -43,7 +34,95 @@ $font-family-base: "Work Sans", sans-serif;
   }
 }
 
-@img (max-width: 768px) {
+
+//efecto boton
+.btn-descarga {
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 10px 22px;
+  font-size: 16px;
+  color: $letter-color;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden; 
+  transition: color 0.4s, box-shadow 0.4s; 
+  z-index: 1; 
+}
+
+/* Estilo para el efecto hover */
+.container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 5vh; 
+}
+
+.btn-descarga {
+  display: inline-flex; // Hace que el contenido del botón se alinee correctamente
+  align-items: center; // Centra el contenido del botón verticalmente
+  justify-content: center; // Centra el contenido del botón horizontalmente
+  width: 160px;
+  border-radius: 30px;
+  padding: 10px 22px; // Ajusta al tamaño deseado
+  font-size: 16px;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative; // Permite el posicionamiento absoluto de pseudo-elementos relativos a este
+  overflow: hidden; // Mantiene efectos visuales dentro del botón
+
+  &:hover {
+    color: $main-color;
+    box-shadow: 0 0 8px $main-color;
+  }
+}
+
+.btn-descarga:hover {
+  color:$main-color;
+  box-shadow: 0 0 8px $main-color;
+}
+
+/* Animación de bordes mejorada */
+.btn-descarga:before, .btn-descarga:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background: $main-color;
+  transition: transform 0.5s ease; 
+}
+
+/* Barra superior e inferior que crece horizontalmente */
+.btn-descarga:before {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  width: 2px; 
+  transform: scaleY(0); 
+}
+
+/* Barra izquierda y derecha que crece verticalmente */
+.btn-descarga:after {
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px; 
+  transform: scaleX(0); 
+}
+
+/* Animación de expansión al hacer hover */
+.btn-descarga:hover:before {
+  transform: scaleY(1); 
+}
+
+.btn-descarga:hover:after {
+  transform: scaleX(1);
+}
+
+
+@media (max-width: 768px) {
   .sobre-mi {
     h2 {
       font-size: 1.75rem; 
