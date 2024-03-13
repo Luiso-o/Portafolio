@@ -17,6 +17,7 @@ $theme-colors: (
 * {
   box-sizing: border-box;
   font-family: "Work Sans", sans-serif; 
+  background-color: map-get($theme-colors, "background2" );
   margin: 0;
   padding: 0;
 }

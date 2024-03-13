@@ -1,27 +1,37 @@
-$theme-colors: (
-  "primary": #40c8a4, 
-  "background1": #1e2326,  
-  "background2": #252a2e,
-  "hover": #33383d,
-);
+$main-color: #40c8a4;
+$background: #1e2326;
+$letter-color:white;
+$font-size-default: 1.1rem;
+$transition-default: 0.5s ease;
+$text-shadow-effect: 3px 3px 6px rgba(0, 0, 0, 0.6);
+
+.navbar{
+  background-color: $background;
+}
 
 //Hello World
 .navbar-brand {
-  color: map-get($theme-colors, "primary"); 
+  color: $main-color; 
   font-size: 25px;
   font-weight: bold;
   margin-left: 40px;
 
     &:hover, &:focus {
-        color: map-get($theme-colors, "primary");
+        color: $main-color;
     }
 }
 
-//responsive
+//Bottom responsive
 .navbar-toggler {
-  font-size: 1.5rem;
-  color: #fff; 
-  border-color: map-get($theme-colors, "primary");  
+  font-size: 1rem;
+  color: $letter-color; 
+  border-color: $main-color;  
+  transition: background-color $transition-default, color $transition-default;
+
+  &:hover, &:focus {
+    background-color: $main-color;
+    color: $letter-color;
+  }
 }
  
 .navbar-toggler-icon {
@@ -29,64 +39,45 @@ $theme-colors: (
 }
 
 .navbar-nav .nav-link {
-  color: white;
+  color: $letter-color;
   font-weight: bold;
-  transition: background-color 0.75s ease, color 0.75s ease, text-shadow 0.75s ease;
+  transition: background-color $transition-default, color $transition-default, text-shadow $transition-default;
   margin-right: 20px;
   border-radius: 20px; 
   background-color: transparent;
+  padding: .5rem 1rem; 
+  margin: 0 5px; 
+  font-size: $font-size-default; 
 
-  &:hover, &:focus {
-    background-color: map-get($theme-colors, "primary");
-    color: #fff;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
-    border-radius: 20px;
+  &:hover, &:focus{
+    background-color: $main-color;
+    color: $letter-color;
+    text-shadow: $text-shadow-effect;
+    transform: scale(1.05);
   }
 }
 
 //Efectos opciones menu
-.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus, .navbar-nav .nav-link.active {
-  background-color: map-get($theme-colors, "primary");
-  color: #fff;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
-  transform: scale(1.05);
-}
-
-.navbar-nav .nav-link {
+.nav-link {
   padding: .5rem 1rem; 
   margin: 0 5px; 
   font-size: 1.1rem; 
   transition: color 0.5s ease, background-color 0.5s ease, transform 0.3s ease;
 }
 
-.nav-link .emoji, .navbar-brand .emoji {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+.nav-link .emoji.active-emoji {
+  opacity: 1 !important;
 }
-  
-.nav-link:hover .emoji, .nav-link.active .emoji {
-    opacity: 1;
+
+//muestra el emogi
+.nav-link:hover .emoji {
+  opacity: 1;
 }
 
 .nav-link .emoji {
   display: inline-block;
-  transition: transform 0.5s ease, opacity 0.5s ease-in-out;
-  transform: scale(0); 
   opacity: 0;
+  transition: opacity $transition-default;
 }
 
-.nav-link:hover .emoji, .nav-link:focus .emoji {
-  opacity: 1;
-  transform: scale(1);
-}
 
-.navbar-toggler {
-  border-color: map-get($theme-colors, "hover");
-  transition: background-color 0.5s ease, color 0.5s ease;
-  font-size: 1rem;
-
-  &:hover, &:focus {
-    background-color: map-get($theme-colors, "primary");
-    color: #fff;
-  }
-}

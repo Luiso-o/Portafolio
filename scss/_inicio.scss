@@ -1,13 +1,25 @@
 @use "sass:math";
 
-$theme-colors: (
-  "primary": #40c8a4, 
-  "background1": #1e2326,  
-  "background2": #252a2e,
-  "hover": #33383d,
-  "icon-bg": transparent,
-  "icon-hover": #ffffff,
+$breakpoints: (
+  "phone": 600px,
+  "tablet": 900px,
+  // Añade más según sea necesario
 );
+
+$background-photo-color: #40c8a4;
+$main-background: #252a2e;
+$letter-color:white;
+
+//responsive para card
+@mixin respond-to($breakpoint-name) {
+  $breakpoint: map-get($breakpoints, $breakpoint-name);
+  @if $breakpoint {
+    @media (max-width: $breakpoint) { @content; }
+  } @else {
+    @warn "No se encontró el breakpoint `#{$breakpoint-name}` en la lista de breakpoints.";
+  }
+}
+
 
 /* SECCION INICIO */
 .inicio {
@@ -24,7 +36,8 @@ $theme-colors: (
     align-items: center;
 }
 
-.inicio .container {
+//card
+.container-inicio {
     max-width: 60%; 
     display: flex;
     flex-direction: column; 
@@ -34,17 +47,25 @@ $theme-colors: (
 }
 
 .card {
-  background-color: map-get($theme-colors, "background2");
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5); 
-  max-width: 300px; 
-  display: flex; 
-  flex-direction: column; 
+  background-color: $main-background;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  border-radius: 50px; 
-  padding: 40px 20px; 
-  min-height: 500px; 
-  color: white;
+  border-radius: 50px;
+  padding: 40px 20px;
+  color: $letter-color;
+  width: auto; 
+  min-width: 250px; 
+  max-width: 90%; 
+  min-height: 430px; 
+
+  @include respond-to('phone') {
+    padding: 20px 10px;
+    max-width: 95%;
+  }
 }
+
 
 .card .col-lg-6 {
     flex: 1;
@@ -55,6 +76,7 @@ $theme-colors: (
     text-align: center; 
 }
 
+//texto
 .text-icons-container h1, .text-icons-container h4 {
   font-size: 1.125rem; 
   text-align: center;
@@ -65,25 +87,19 @@ $theme-colors: (
   font-weight: bold;
 }
 
-.img-container img {
-  max-width: 100%;
-  max-height: 250px; 
-  height: auto; 
-  display: block; 
-  box-shadow: 0 0 8px 2px rgba(64, 200, 164, 0.7); 
-  border-radius: 50%;
+//Imagen presentacion
+.img-container {
+  min-width: 200px; 
+  min-height: 200px; 
+  background: url(img/presentacion.png);
+  background-size: cover; 
+  background-position: center; 
+  border-radius: 50%; 
+  box-shadow: 0 0 8px 2px rgba(64, 200, 164, 0.7);
+  display: block;
 }
 
-
-.cursor {
-  opacity: 1;
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
+//Links redes sociales
 .redes {
   display: flex;
   justify-content: center;
@@ -91,19 +107,20 @@ $theme-colors: (
   margin-top: 10px;
 }
 
+//Efecto cristal botones redes
 .redes > a {
   position: relative;
   overflow: hidden; 
   transition: all 0.3s ease;
-  background-color: map-get($theme-colors, "icon-bg"); 
+  background-color: transparent; 
   width: 50px; 
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: white;
-  border: 2px solid white; 
+  color: $letter-color;
+  border: 2px solid $letter-color; 
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
   font-size: 22px; 
 
@@ -123,9 +140,8 @@ $theme-colors: (
   }
 
   &:hover, &:focus {
-    color: white;
-    background-color: map-get($theme-colors, "primary");
-    box-shadow: 0 0 15px rgba(0,0,0,0.2), 0 0 15px map-get($theme-colors, "primary") inset;
+    color: $letter-color;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2), 0 0 15px $background-photo-color inset;
 
     &::before {
       left: 150%; 
@@ -133,9 +149,15 @@ $theme-colors: (
   }
 }
 
+//Responsive
 @media (max-width: 768px) {
   .inicio .container {
     max-width: 100%; 
+  }
+
+  .img-container {
+    width: 80%; 
+    height: auto;
   }
 
   .card {
