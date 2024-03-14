@@ -32,3 +32,6 @@ El portafolio está diseñado para ser intuitivo y fácil de navegar. Simplement
 Si estás interesado en colaborar o quieres saber más sobre mí, no dudes en visitar la sección de contacto de mi portafolio. Estoy abierto a oportunidades y siempre en busca de nuevos desafíos.
 
 ¡Gracias por visitar mi portafolio!
+
+https://github.com/Luiso-o/portafolio/assets/128043647/b52d31b2-d9ec-48e8-a65f-3b2ce984f84e
+
