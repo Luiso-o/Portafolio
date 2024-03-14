@@ -1,7 +1,8 @@
 $theme-colors: (
-    "background1": #1e2326,  
+  "background1": #1e2326,
   "text": #ffffff,
   "link": #64c8a4,
+  "link-hover": darken(#64c8a4, 15%)
 );
 
 .site-footer {
@@ -20,32 +21,57 @@ $theme-colors: (
   height: 100%;
 }
 
-.site-footer .footer-content {
-  text-align: center;
-}
-
-.site-footer .footer-content .to-top {
-  display: inline-block;
-  margin-bottom: 10px;
-  color: #64c8a4;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.site-footer .footer-content .to-top:hover {
-  color: darken(#64c8a4, 10%);
-}
-
-.opensource-link {
-  color: map-get($theme-colors, "link"); 
-  transition: transform 0.3s ease; 
-  text-decoration: none; 
-}
-
-.opensource-link:hover {
+.site-footer a {
   color: map-get($theme-colors, "link");
-  transform: scale(1.1);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  
+  &:hover {
+    color: map-get($theme-colors, "link-hover");
+    transform: translateY(-2px); 
+  }
 }
 
+.to-top {
+  margin-bottom: 10px;
+  color: map-get($theme-colors, "text");
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+    img{
+      width: 35px;
+      height: 35px;
+      background-color: #64c8a4;
+      border-radius: 50%;
+    }
+
+  &:hover {
+    transform: translateY(-2px); 
+  }
+}
+.to-top {
+  margin-bottom: 10px;
+  color: map-get($theme-colors, "text");
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px); 
+  }
+}
+.opensource-link {
+  color: map-get($theme-colors, "link");
+  transition: transform 0.3s ease, color 0.3s ease; // Ajustamos para animar el transform y el color
+  text-decoration: none;
+  display: inline-block; // Esto permite que la transformación se aplique correctamente
+  transform-origin: center; // Asegura que la escala se aplique de manera uniforme alrededor del centro
+}
+
+.opensource-link:hover, .opensource-link:focus {
+  color: map-get($theme-colors, "link-hover");
+  transform: scale(1.2); // Aumenta el tamaño visualmente sin afectar el layout
+}
 
 

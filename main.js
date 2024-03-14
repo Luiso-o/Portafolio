@@ -73,8 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
-
 //Actualiza mi experiencia
 window.onload = function() {
   var startYear = 2021; 
