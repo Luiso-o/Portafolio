@@ -46,23 +46,34 @@ document.addEventListener('DOMContentLoaded', function () {
   typeWriter();
 });
 
-//gestion de animaciones gif
+//gestion de animaciones gif skills
 document.addEventListener("DOMContentLoaded", function() {
   const skillImages = document.querySelectorAll('#professional-skills .border-img img');
 
   skillImages.forEach(img => {
-      const originalSrc = img.src;
+    const gifImage = new Image();
+    gifImage.src = img.getAttribute('data-gif');
+
+    img.addEventListener('mouseover', function() {
       const gifSrc = img.getAttribute('data-gif');
+      img.src = gifSrc;
+      img.style.width = "80%"; 
+      img.style.height = "auto";
+      img.src = gifSrc; 
+    });
 
-      img.addEventListener('mouseover', function() {
-          img.src = gifSrc;
-      });
-
-      img.addEventListener('mouseout', function() {
-          img.src = originalSrc;
-      });
+    img.addEventListener('mouseout', function() {
+      const staticSrc = img.getAttribute('data-static');
+      img.src = staticSrc;
+      img.style.width = "60%"; 
+      img.style.height = "auto";
+      img.src = staticSrc; 
+    });
   });
 });
+
+
+
 
 //Actualiza mi experiencia
 window.onload = function() {
@@ -76,13 +87,4 @@ window.onload = function() {
 document.addEventListener('DOMContentLoaded', function () {
   var year = new Date().getFullYear(); // Obtiene el año actual
   document.getElementById('current-year').textContent = year; // Establece el año actual en el elemento con ID 'current-year'
-});
-
-
-document.getElementById('downloadCvButton').addEventListener('click', function() {
-  var emojiContainer = document.getElementById('emojiContainer');
-  emojiContainer.style.display = 'inline'; // Muestra el emoji
-  setTimeout(function() {
-      emojiContainer.style.display = 'none'; // Oculta el emoji después de 5 segundos
-  }, 5000); // Ajusta este tiempo según necesites
 });
