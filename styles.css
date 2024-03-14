@@ -11809,95 +11809,85 @@ textarea.form-control-lg {
   background-color: white;
   border-radius: 50%;
   width: 30px;
-  height: auto;
+  height: 30px;
   margin-bottom: 15px;
   box-shadow: 0 0 8px 2px rgba(64, 200, 164, 0.7);
 }
 
-.btn-descarga {
-  display: inline-block;
-  cursor: pointer;
-  background-color: transparent;
-  padding: 10px 22px;
-  font-size: 16px;
-  color: white;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  transition: color 0.4s, box-shadow 0.4s;
-  z-index: 1;
-}
-
-/* Estilo para el efecto hover */
-.container-center {
+.custom-container {
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5vh;
+  width: 100%;
 }
-
-.btn-descarga {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 160px;
-  border-radius: 30px;
-  padding: 10px 22px;
-  font-size: 16px;
-  background-color: transparent;
-  text-decoration: none;
-  cursor: pointer;
-  position: relative;
+.custom-container .container-button {
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
-.btn-descarga:hover {
-  color: #40c8a4;
-  box-shadow: 0 0 8px #40c8a4;
-}
-
-.btn-descarga:hover {
-  color: #40c8a4;
-  box-shadow: 0 0 8px #40c8a4;
-}
-
-/* Animación de bordes mejorada */
-.btn-descarga:before, .btn-descarga:after {
+.custom-container .container-button::before {
   content: "";
   position: absolute;
-  z-index: -1;
-  background: #40c8a4;
-  transition: transform 0.5s ease;
-}
-
-/* Barra superior e inferior que crece horizontalmente */
-.btn-descarga:before {
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: auto;
-  width: 2px;
-  transform: scaleY(0);
-}
-
-/* Barra izquierda y derecha que crece verticalmente */
-.btn-descarga:after {
-  top: auto;
-  right: 0;
-  bottom: 0;
   left: 0;
-  height: 2px;
-  transform: scaleX(0);
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  transition: border-color 0.4s ease-out;
+}
+.custom-container .container-button:hover::before {
+  border-color: #40c8a4;
+  animation: drawBorder 2s linear forwards;
+}
+.custom-container .container-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  background-color: #1e2326;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.custom-container .container-button a:hover {
+  background-color: #08090a;
+  color: #40c8a4;
 }
 
-/* Animación de expansión al hacer hover */
-.btn-descarga:hover:before {
-  transform: scaleY(1);
+@keyframes drawBorder {
+  0% {
+    -webkit-clip-path: inset(0 0 0 100%);
+            clip-path: inset(0 0 0 100%);
+  }
+  25% {
+    -webkit-clip-path: inset(0 0 100% 0);
+            clip-path: inset(0 0 100% 0);
+  }
+  50% {
+    -webkit-clip-path: inset(0 100% 0 0);
+            clip-path: inset(0 100% 0 0);
+  }
+  75% {
+    -webkit-clip-path: inset(100% 0 0 0);
+            clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+  }
 }
-
-.btn-descarga:hover:after {
-  transform: scaleX(1);
-}
-
 @media (max-width: 768px) {
   .sobre-mi h2, .sobre-mi .h2 {
     font-size: 1.75rem;
@@ -11907,27 +11897,29 @@ textarea.form-control-lg {
   }
 }
 .skills {
-  padding-top: 30px;
-  color: #ffffff;
+  padding-top: 40px;
+  min-height: 1150px;
+  color: white;
   text-align: center;
 }
-
 .skills h2, .skills .h2 {
   font-weight: bold;
 }
-
-.skill-icon {
+.skills .skill-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-
-.border-img {
+.skills .sub-title {
+  font-weight: bold;
+  color: rgba(64, 200, 164, 0.7);
+}
+.skills .border-img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -11935,18 +11927,32 @@ textarea.form-control-lg {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.skills .border-img:hover {
+.skills .border-img img {
+  width: 60%;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+.skills .border-img:hover, .skills .border-img:focus {
   transform: scale(1.05);
   box-shadow: 0 0 12px 3px rgba(185, 147, 214, 0.9);
 }
 
-.skills img {
-  max-width: 60%;
-  max-height: 60%;
-  transition: opacity 0.3s ease;
+@media (max-width: 768px) {
+  .skills {
+    padding: 20px;
+  }
+  .skills .skill-icon {
+    margin-bottom: 20px;
+  }
+  .skills .border-img {
+    width: 60px;
+    height: 60px;
+  }
+  .skills img {
+    max-width: 50%;
+    max-height: 50%;
+  }
 }
-
 .portfolio {
   background-color: #252a2e;
   min-height: 650px;
