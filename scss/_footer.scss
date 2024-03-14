@@ -1,19 +1,18 @@
-$theme-colors: (
-  "background1": #1e2326,
-  "text": #ffffff,
-  "link": #64c8a4,
-  "link-hover": darken(#64c8a4, 15%)
-);
+$background: #1e2326;
+$background-bottom: #252a2e;
+$text:white;
+$link:#64c8a4;
+$link-hover:darken(#64c8a4, 15%);
 
 .site-footer {
-  background-color: map-get($theme-colors, "background1");
-  color: map-get($theme-colors, "text");
+  background-color: $background;
+  color: $text;
   padding: 20px 0;
   text-align: center;
   height: 150px;
 }
 
-.site-footer .container {
+.site-footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,56 +21,33 @@ $theme-colors: (
 }
 
 .site-footer a {
-  color: map-get($theme-colors, "link");
+  color: $link;
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
   
   &:hover {
-    color: map-get($theme-colors, "link-hover");
     transform: translateY(-2px); 
   }
 }
 
 .to-top {
   margin-bottom: 10px;
-  color: map-get($theme-colors, "text");
+  color: $text;
   padding: 8px 16px;
   border-radius: 20px;
   transition: background-color 0.3s ease, transform 0.3s ease;
-
-    img{
-      width: 35px;
-      height: 35px;
-      background-color: #64c8a4;
-      border-radius: 50%;
-    }
-
-  &:hover {
-    transform: translateY(-2px); 
-  }
+  background-color: $background-bottom;
 }
-.to-top {
-  margin-bottom: 10px;
-  color: map-get($theme-colors, "text");
-  padding: 8px 16px;
-  border-radius: 20px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
 
-  &:hover {
-    transform: translateY(-2px); 
-  }
-}
 .opensource-link {
-  color: map-get($theme-colors, "link");
-  transition: transform 0.3s ease, color 0.3s ease; // Ajustamos para animar el transform y el color
+  color: $link;
+  transition: transform 0.3s ease, color 0.3s ease; 
   text-decoration: none;
-  display: inline-block; // Esto permite que la transformación se aplique correctamente
-  transform-origin: center; // Asegura que la escala se aplique de manera uniforme alrededor del centro
+  display: inline-block; 
+  transform-origin: center; 
 }
 
 .opensource-link:hover, .opensource-link:focus {
-  color: map-get($theme-colors, "link-hover");
-  transform: scale(1.2); // Aumenta el tamaño visualmente sin afectar el layout
+  color: $link-hover;
+  transform: scale(1.2); 
 }
-
-
