@@ -1,18 +1,18 @@
 $background: #252a2e;
 $color-white: #fff;
 $overlay-bg-color: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%);
-$max-content-width: 840px;
+$max-content-width: 940px;
 $carousel-height: 460px;
 $breakpoint-md: 768px;
 
 .portfolio{
     background-color: $background;
     min-height: 650px;
+}
 
-    .container-carousel h2{
-        color: $color-white;
-        font-weight: bold;
-    }
+.title{
+    color: $color-white;
+    font-weight: bold;
 }
 
 #carouselExampleIndicators {
@@ -36,13 +36,12 @@ $breakpoint-md: 768px;
     overflow: hidden;
 }
 
-
 .carousel-item img{
     width: 100%; 
     height: $carousel-height; 
-    object-fit: cover; 
+    object-fit: contain; 
     background-color: $color-white; 
-  }
+}
 
 .carousel-item video{
     width: 100%; 
@@ -53,18 +52,29 @@ $breakpoint-md: 768px;
 .project-description {
     position: absolute;
     top: 50%; 
-    left: 50%; 
+    left: 70%; 
     transform: translate(-50%, -50%); 
+    width: 80%;
     max-width: 90%; 
     max-height: 90%; 
     overflow: auto;
     padding: 10px;
     box-sizing: border-box;
-}
 
-#titulo, #contenido{
-    color: $background;
-    font-weight: bold;
+    h2 {
+        color: black;
+        font-weight: bold;
+    }
+
+    p{
+        color: black;
+        font-size: 20px;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
 }
 
 .lenguajes {

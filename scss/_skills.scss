@@ -1,4 +1,4 @@
-// Definición de variables
+$background: #1e2326;
 $white: white;
 $shadow-color: rgba(64, 200, 164, 0.7);
 $hover-shadow-color: rgba(185, 147, 214, 0.9);
@@ -12,6 +12,7 @@ $breakpoint-mobile: 768px; // Breakpoint para diseño responsive
     min-height: 1150px; 
     color: $white;
     text-align: center;
+    background-color: $background;
 
     h2 {
         font-weight: bold;
