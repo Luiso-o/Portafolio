@@ -12491,17 +12491,8 @@ textarea.form-control-lg {
 }
 .carousel-control-prev-icon:after,
 .carousel-control-next-icon:after {
-  content: "🡸";
   color: #fff;
   font-size: 20px;
-}
-
-.carousel-control-prev-icon:after {
-  content: "🡸";
-}
-
-.carousel-control-next-icon:after {
-  content: "🡺";
 }
 
 @media (max-width: 768px) {

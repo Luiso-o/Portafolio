@@ -87,11 +87,3 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('current-year').textContent = year; // Establece el año actual en el elemento con ID 'current-year'
 });
 
-//carrusel
-document.addEventListener("DOMContentLoaded", function(){
-  var myCarousel = document.querySelector('#carouselExampleIndicators');
-  var carousel = new bootstrap.Carousel(myCarousel, {
-    interval: 2000,
-    wrap: true
-  });
-});
