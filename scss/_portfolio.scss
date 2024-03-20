@@ -106,7 +106,7 @@ $breakpoint-md: 768px;
     opacity: 0;
     transition: opacity 0.5s ease;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); // Para soporte en Safari
+    -webkit-backdrop-filter: blur(10px); 
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -172,19 +172,11 @@ $color-button-hover-bg: rgba(0, 0, 0, 0.8);
     background-image: none; 
 
     &:after {
-        content: '🡸'; 
         color: $color-white;
         font-size: 20px; 
     }
 }
 
-.carousel-control-prev-icon:after {
-    content: '🡸';
-}
-
-.carousel-control-next-icon:after {
-    content: '🡺'; 
-}
 
 @media (max-width: $breakpoint-md) {
     #carouselExampleIndicators {
