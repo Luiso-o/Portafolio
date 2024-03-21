@@ -12485,16 +12485,6 @@ textarea.form-control-lg {
   right: 10px;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-image: none;
-}
-.carousel-control-prev-icon:after,
-.carousel-control-next-icon:after {
-  color: #fff;
-  font-size: 20px;
-}
-
 @media (max-width: 768px) {
   #carouselExampleIndicators {
     width: 95vw;
