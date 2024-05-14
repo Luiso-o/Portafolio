@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Actualiza mi experiencia
 window.onload = function() {
-  var startYear = 2021; 
+  var startYear = 2022; 
   var currentYear = new Date().getFullYear(); 
   var experienceYears = currentYear - startYear; 
   document.getElementById('experienceYears').innerText = experienceYears; 
