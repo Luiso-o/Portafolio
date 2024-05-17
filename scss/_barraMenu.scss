@@ -1,4 +1,6 @@
-$main-color: #40c8a4;
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap');
+
+$main-color: rgb(46, 114, 96);
 $background: #1e2326;
 $letter-color:white;
 $font-size-default: 1.1rem;
@@ -12,13 +14,12 @@ $text-shadow-effect: 3px 3px 6px rgba(0, 0, 0, 0.6);
 //Hello World
 .navbar-brand {
   color: $main-color; 
-  font-size: 25px;
-  font-weight: bold;
-  margin-left: 40px;
-
-    &:hover, &:focus {
-        color: $main-color;
-    }
+  font-family: "Chau Philomene One", sans-serif;
+  font-size: 20px;
+ 
+  &:hover, &:focus {
+    color: $main-color;
+  }
 }
 
 //Bottom responsive

@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -12102,23 +12103,22 @@ textarea.form-control-lg {
 }
 
 .navbar-brand {
-  color: #40c8a4;
-  font-size: 25px;
-  font-weight: bold;
-  margin-left: 40px;
+  color: rgb(46, 114, 96);
+  font-family: "Chau Philomene One", sans-serif;
+  font-size: 20px;
 }
 .navbar-brand:hover, .navbar-brand:focus {
-  color: #40c8a4;
+  color: rgb(46, 114, 96);
 }
 
 .navbar-toggler {
   font-size: 1rem;
   color: white;
-  border-color: #40c8a4;
+  border-color: rgb(46, 114, 96);
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 .navbar-toggler:hover, .navbar-toggler:focus {
-  background-color: #40c8a4;
+  background-color: rgb(46, 114, 96);
   color: white;
 }
 
@@ -12138,7 +12138,7 @@ textarea.form-control-lg {
   font-size: 1.1rem;
 }
 .navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
-  background-color: #40c8a4;
+  background-color: rgb(46, 114, 96);
   color: white;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
   transform: scale(1.05);
