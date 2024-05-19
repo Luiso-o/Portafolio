@@ -17,78 +17,90 @@ $background-button: #1e2326;
   h2, h3 {
     color: $letter-color;
   }
-}
 
-// Estilos de .icono
-.icono {
-  margin: 5px;
-  display: inline-block;
-  
-  img {
-    background-color: $letter-color;
-    border-radius: 50%;
-    width: 30px; 
-    height: 30px;
-    margin-bottom: 15px;
-    box-shadow: 0 0 8px 2px rgba(64, 200, 164, 0.7); 
+  h3{
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .tools-container{
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 
-// Botón descarga CV
+//iconos
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  align-items: center;
+}
+
+.icono-img {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin: 5px;
+  background-color: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px; 
+  box-shadow: 0 0 8px 2px rgba(41, 151, 122, 0.7);
+
+  img{
+    width: 80%; 
+    height: 80%;
+  }
+}
+
+//Botón descarga CV
 .custom-container {
-  margin: 0 auto; 
   display: flex;
   justify-content: center; 
   align-items: center; 
   width: 100%;
+}
 
-  .container-button {
-      width: 150px;
-      height: 50px;
-      border-radius: 20px;
-      background-color: rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      z-index: 1;
+.container-button {
+  width: 150px; // Agregar anchura si es necesario
+  height: 50px;  // Agregar altura si es necesario
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 
-      &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          border: 2px solid transparent;
-          border-radius: 20px;
-          transition: border-color 0.4s ease-out;
-      }
-  
-      &:hover::before {
-          border-color: $main-color;
-          animation: drawBorder 2s linear forwards;
-      }
-  
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        text-decoration: none;
-        color: white;
-        border-radius: 20px;
-        background-color: $background-button;
-        transition: background-color 0.3s ease, color 0.3s ease;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: border-color 0.4s ease-out;
+  }
 
-        &:hover {
-          background-color: darken($background-button, 10%);
-          color: $main-color;
-        }
-      }
+  &:hover::before {
+    border-color: $main-color;
+    animation: drawBorder 2s linear forwards;
+  }
+
+  a {
+    flex: 1; // Ocupa todo el espacio disponible del contenedor flex
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background-color: $background-button;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 20px;
+
+    &:hover {
+      background-color: darken($background-button, 10%);
+      color: $main-color;
+    }
   }
 }
 
