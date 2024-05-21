@@ -12231,6 +12231,10 @@ textarea.form-control-lg {
   gap: 5px;
   margin-top: 20px;
 }
+.slider .list .item .button a {
+  text-decoration: none;
+  color: #000;
+}
 
 .slider .list .item .button button {
   border: none;
