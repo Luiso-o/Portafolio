@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+
+# Output directories
+dist/
+build/
+
+# Map files
+*.map
