@@ -278,11 +278,17 @@ $white-color: #eee;
         opacity: 0;
     }
 }
+
 @media screen and (max-width: 678px) {
     .slider .list .item .content{
         padding-right: 0;
+        width: 80%;
     }
     .slider .list .item .content .title{
-        font-size: 50px;
+        font-size: 1.5em !important;
+    }
+
+    .slider .list .item .content .type{
+        font-size: 1.2em !important;
     }
 }
